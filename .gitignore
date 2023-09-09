@@ -19,3 +19,6 @@
 
 # Go workspace file
 go.work
+
+# Make unzipped folder remain on git but discard its contents
+Unzipped/

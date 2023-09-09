@@ -1,0 +1,155 @@
+{
+    "mappings": [
+        {
+            "windows": "01-Normal",
+            "linux": [
+                "arrow",
+                "default",
+                "left_ptr",
+                "top_left_arrow"
+            ]
+        },
+        {
+            "windows": "02-Link",
+            "linux": [
+                "hand",
+                "hand1",
+                "hand2",
+                "openhand",
+                "pointer",
+                "pointing_hand"
+            ]
+        },
+        {
+            "windows": "03-Loading",
+            "linux": [
+                "half-busy",
+                "left_ptr_watch",
+                "progress",
+                "wait",
+                "watch"
+            ]
+        },
+        {
+            "windows": "04-Help",
+            "linux": [
+                "help",
+                "left_ptr_help",
+                "question_arrow",
+                "whats_this"
+            ]
+        },
+        {
+            "windows": "05-Text Select",
+            "linux": [
+                "ibeam",
+                "text",
+                "xterm"
+            ]
+        },
+        {
+            "windows": "06-Handwriting",
+            "linux": [
+                "draft",
+                "pencil"
+            ]
+        },
+        {
+            "windows": "07-Target",
+            "linux": [
+                "cross",
+                "crosshair"
+            ]
+        },
+        {
+            "windows": "08-Unavailable",
+            "linux": [
+                "circle",
+                "crossed_circle",
+                "dnd-no-drop",
+                "forbidden",
+                "pirate"
+            ]
+        },
+        {
+            "windows": "09-Location Select",
+            "linux": []
+        },
+        {
+            "windows": "10-Person Select",
+            "linux": []
+        },
+        {
+            "windows": "11-Vertical Resize",
+            "linux": [
+                "bottom_side",
+                "n-resize",
+                "ns-resize",
+                "row-resize",
+                "s-resize",
+                "sb_v_double_arrow",
+                "size_ver",
+                "split_v",
+                "v_double_arrow"
+            ]
+        },
+        {
+            "windows": "12-Horizontal Resize",
+            "linux": [
+                "col-resize",
+                "down-arrow",
+                "e-resize",
+                "ew-resize",
+                "h_double_arrow",
+                "left-arrow",
+                "left_side",
+                "right-arrow",
+                "right_side",
+                "sb_h_double_arrow",
+                "size_hor",
+                "split_h",
+                "w-resize"
+            ]
+        },
+        {
+            "windows": "13-Diagonal Resize 1",
+            "linux": [
+                "bottom_right_corner",
+                "nw-resize",
+                "nwse-resize",
+                "se-resize",
+                "size_fdiag",
+                "top_left_corner"
+            ]
+        },
+        {
+            "windows": "14-Diagonal Resize 2",
+            "linux": [
+                "bottom_left_corner",
+                "size_bdiag",
+                "sw-resize",
+                "top_right_corner"
+            ]
+        },
+        {
+            "windows": "15-Move",
+            "linux": [
+                "all-scroll",
+                "closedhand",
+                "dnd-move",
+                "dnd-none",
+                "fleur",
+                "grab",
+                "grabbing",
+                "move"
+            ]
+        },
+        {
+            "windows": "16-Alternate Select",
+            "linux": [
+                "top_side",
+                "up_arrow"
+            ]
+        }
+    ]
+}
