@@ -3,13 +3,15 @@ Converts and renames cursors from Windows format (*.cur, *.ani) to Xcursor forma
 
 ## Prerequisites
 
-The program has only been tested on Linux.
+The program has only been tested on Linux Mint.
+
+Install [Go](https://go.dev/doc/install)
 
 This project is a helper program for [win2xcur](https://github.com/quantum5/win2xcur). Original project needs to be installed.
 
 ## Usage
 
-Place your `.ani` or `.cur` files in a directory inside folder `Unzipped`. Your hierarchy should look something like this.
+Place your `.ani` or `.cur` files in a directory inside directory `Unzipped`. Cursor directory might be renamed if it contains whitespace as `win2xcur` converter does not support them in folder path. Your hierarchy should look something like this.
 
 ```sh
 ❯ tree
@@ -48,4 +50,4 @@ go build
 ./win2xcur-batch
 ```
 
-Look into `Sorted` folder for final output. Place the cursor folder in `/usr/share/icons`
+Look into `Sorted` directory for final output. Place the cursor directory in `/usr/share/icons` or `/home/$USER/.icons`
