@@ -55,8 +55,9 @@
             ]
         },
         {
-            "windows": "07-Target",
+            "windows": "07-Precision",
             "linux": [
+                "cell",
                 "cross",
                 "crosshair"
             ]
@@ -68,6 +69,8 @@
                 "crossed_circle",
                 "dnd-no-drop",
                 "forbidden",
+                "not-allowed",
+                "no-drop",
                 "pirate"
             ]
         },
@@ -126,6 +129,8 @@
             "windows": "14-Diagonal Resize 2",
             "linux": [
                 "bottom_left_corner",
+                "ne-resize",
+                "nesw-resize",
                 "size_bdiag",
                 "sw-resize",
                 "top_right_corner"
