@@ -1,17 +1,22 @@
 # win2xcur-batch
-Converts and renames cursors from Windows format (*.cur, *.ani) to Xcursor format.
+Batch converts and renames cursors from Windows format (*.cur, *.ani) to Xcursor format.
 
 ## Prerequisites
-
-The program has only been tested on Linux Mint.
-
-Install [Go](https://go.dev/doc/install)
 
 This project is a helper program for [win2xcur](https://github.com/quantum5/win2xcur). Original project needs to be installed.
 
 ## Usage
 
-Place your `.ani` or `.cur` files in a directory inside directory `Unzipped`. Cursor directory might be renamed if it contains whitespace as `win2xcur` converter does not support them in folder path. Your hierarchy should look something like this.
+Notice: the program has only been tested on Linux Mint.
+
+Download and unarchive the latest release from GitHub.
+
+```sh
+tar -xvf win2xcur-batch-vMAJOR.MINOR.PATCH.tar.gz
+cd win2xcur-batch-vMAJOR.MINOR.PATCH
+```
+
+Place your `.ani` or `.cur` files as a directory inside the directory `Unzipped`. Cursor directory might be renamed if it contains whitespace as `win2xcur` converter does not support them in the directory path. Your hierarchy should look something like this.
 
 ```sh
 ❯ tree
@@ -22,7 +27,7 @@ Place your `.ani` or `.cur` files in a directory inside directory `Unzipped`. Cu
 ├── map.json
 ├── README.md
 └── Unzipped
-    └── CursorFolder
+    └── CursorDirectory
         ├── 01-Normal.ani
         ├── 02-Link.ani
         ├── 03-Loading.ani
@@ -46,8 +51,15 @@ Place your `.ani` or `.cur` files in a directory inside directory `Unzipped`. Cu
 Execute the program.
 
 ```sh
-go build
 ./win2xcur-batch
 ```
 
 Look into `Sorted` directory for final output. Place the cursor directory in `/usr/share/icons` or `/home/$USER/.icons`
+
+# Development (Manual Build)
+
+Install [Go](https://go.dev/doc/install) and build the project
+
+```sh
+go build
+```
