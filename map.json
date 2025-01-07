@@ -12,12 +12,21 @@
         {
             "windows": "02-Link",
             "linux": [
+                "alias",
+                "dnd-link",
                 "hand",
                 "hand1",
                 "hand2",
+                "link",
                 "openhand",
                 "pointer",
-                "pointing_hand"
+                "pointing_hand",
+                "3085a0e285430894940527032f8b26df",
+                "640fb0e74195791501fd1ed57b41487f",
+                "9d800788f1b08800ae810202380a0822",
+                "a2a266d0498c3104214a47bd64ab0fc8",
+                "b66166c04f8c3109214a4fbd64a50fc8",
+                "e29285e634086352946a0e7090d73106"
             ]
         },
         {
@@ -27,16 +36,22 @@
                 "left_ptr_watch",
                 "progress",
                 "wait",
-                "watch"
+                "watch",
+                "00000000000000020006000e7e9ffc3f",
+                "08e8e1c95fe2fc01f976f1e063a24ccd",
+                "3ecb610c1bf2410f44200f48c40d3599"
             ]
         },
         {
             "windows": "04-Help",
             "linux": [
+                "dnd-ask",
                 "help",
                 "left_ptr_help",
                 "question_arrow",
-                "whats_this"
+                "whats_this",
+                "5c6cd98b3f3ebcb1f9c7f1c204630408",
+                "d9ce0ab605698f320427677b458ad60b"
             ]
         },
         {
@@ -44,7 +59,8 @@
             "linux": [
                 "ibeam",
                 "text",
-                "xterm"
+                "xterm",
+                "vertical-text"
             ]
         },
         {
@@ -58,8 +74,14 @@
             "windows": "07-Precision",
             "linux": [
                 "cell",
+                "color-picker",
+                "cross_reverse",
                 "cross",
-                "crosshair"
+                "crosshair",
+                "diamond_cross",
+                "plus",
+                "size_all",
+                "tcross"
             ]
         },
         {
@@ -71,7 +93,8 @@
                 "forbidden",
                 "not-allowed",
                 "no-drop",
-                "pirate"
+                "pirate",
+                "03b6e0fcb3499374a867c041f52298f0"
             ]
         },
         {
@@ -93,7 +116,9 @@
                 "sb_v_double_arrow",
                 "size_ver",
                 "split_v",
-                "v_double_arrow"
+                "v_double_arrow",
+                "00008160000006810000408080010102",
+                "2870a09082c103050810ffdffffe0204"
             ]
         },
         {
@@ -104,14 +129,16 @@
                 "e-resize",
                 "ew-resize",
                 "h_double_arrow",
-                "left-arrow",
                 "left_side",
-                "right-arrow",
+                "left-arrow",
                 "right_side",
+                "right-arrow",
                 "sb_h_double_arrow",
                 "size_hor",
                 "split_h",
-                "w-resize"
+                "w-resize",
+                "14fef782d02440884392942c11205230",
+                "028006030e0e7ebffc7f7070c0600140"
             ]
         },
         {
@@ -122,18 +149,24 @@
                 "nwse-resize",
                 "se-resize",
                 "size_fdiag",
-                "top_left_corner"
+                "top_left_corner",
+                "ul_angle",
+                "c7088f0f3e6c8088236ef8e1e3e70000"
             ]
         },
         {
             "windows": "14-Diagonal Resize 2",
             "linux": [
+                "bd_double_arrow",
                 "bottom_left_corner",
+                "fd_double_arrow",
                 "ne-resize",
                 "nesw-resize",
                 "size_bdiag",
                 "sw-resize",
-                "top_right_corner"
+                "top_right_corner",
+                "ur_angle",
+                "fcf1c3c7cd4491d801f1e1c78f100000"
             ]
         },
         {
@@ -146,14 +179,21 @@
                 "fleur",
                 "grab",
                 "grabbing",
-                "move"
+                "move",
+                "4498f0e0c1937ffe01fd06f973665830",
+                "9081237383d90e509aa00f00170e968f"
             ]
         },
         {
             "windows": "16-Alternate Select",
             "linux": [
                 "top_side",
-                "up_arrow"
+                "up_arrow",
+                "right_ptr",
+                "draft_large",
+                "draft_small",
+                "up-arrow",
+                "center_ptr"
             ]
         }
     ]
