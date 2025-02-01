@@ -107,19 +107,25 @@ func main() {
 		for _, winFile := range winFiles {
 			for _, pair := range mapped.Pairs {
 				if pair.Windows == winFile.Name() {
-					for _, linuxName := range pair.Linux {
-						fmt.Println("  " + winFile.Name() + " -> " + linuxName)
-						input, err := ioutil.ReadFile(orgDir + "/" + winFile.Name())
-						if err != nil {
-							fmt.Println(err)
-							return
-						}
+					for index, linuxName := range pair.Linux {
+						if index == 0 {
+							fmt.Println("  " + winFile.Name() + " -> " + linuxName)
+							input, err := ioutil.ReadFile(orgDir + "/" + winFile.Name())
+							if err != nil {
+								fmt.Println(err)
+								return
+							}
 
-						err = ioutil.WriteFile(linuxCursorDir+"/"+linuxName, input, 0644)
-						if err != nil {
-							fmt.Println("Error creating", linuxCursorDir+"/"+linuxName)
-							fmt.Println(err)
-							return
+							err = ioutil.WriteFile(linuxCursorDir+"/"+linuxName, input, 0644)
+							if err != nil {
+								fmt.Println("Error creating", linuxCursorDir+"/"+linuxName)
+								fmt.Println(err)
+								return
+							}
+						} else {
+							firstLinuxName := pair.Linux[0]
+							fmt.Println("  " + winFile.Name() + " -> " + linuxName + " (symlink to: " + firstLinuxName + ")")
+							os.Symlink(firstLinuxName, linuxCursorDir+"/"+linuxName)
 						}
 					}
 				}
