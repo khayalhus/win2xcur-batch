@@ -56,6 +56,11 @@ Execute the program.
 
 Look into `Sorted` directory for final output. Place the cursor directory in `/usr/share/icons` or `/home/$USER/.icons`
 
+# Options
+
+* `--scale` - Scales the cursor by the provided float value (e.g. `--scale 2.5`).
+* `--shadow` - Adds a drop shadow to the cursor.
+
 # Development (Manual Build)
 
 Install [Go](https://go.dev/doc/install) and build the project
