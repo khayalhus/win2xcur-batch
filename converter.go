@@ -2,8 +2,8 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"os/exec"
 	"regexp"
@@ -21,12 +21,25 @@ type Pair struct {
 }
 
 func main() {
+	var (
+		withShadows = flag.Bool("shadow", false, "Add a drop shadow to the converted cursor")
+		withScale   = flag.Float64("scale", 1.0, "Scales the image by the specified factor")
+	)
+
+	flag.Parse()
+
+	args := fmt.Sprintf("--scale %v", *withScale)
+
+	if *withShadows {
+		args += " --shadow"
+	}
+
 	pwd, _ := os.Getwd()
 	windowsDir := "Unzipped" // Replace with the path to your directory
 	fullPathToWindowsDir := pwd + "/" + windowsDir
 
 	// Read windows to linux mappings from file
-	file, _ := ioutil.ReadFile("map.json")
+	file, _ := os.ReadFile("map.json")
 	mapped := Mappings{}
 	_ = json.Unmarshal([]byte(file), &mapped)
 
@@ -69,7 +82,8 @@ func main() {
 			fmt.Println(convertMkdirErr)
 			return
 		}
-		convertCmd := fmt.Sprintf("win2xcur %s/*.ani -o %s", relativePathToDir, convertDir+"/"+dirName)
+
+		convertCmd := fmt.Sprintf("win2xcur %s/*.ani %s -o %s", relativePathToDir, args, convertDir+"/"+dirName)
 		fmt.Println(convertCmd)
 		cmd := exec.Command("bash", "-c", convertCmd)
 		err := cmd.Run()
@@ -110,13 +124,13 @@ func main() {
 					for index, linuxName := range pair.Linux {
 						if index == 0 {
 							fmt.Println("  " + winFile.Name() + " -> " + linuxName)
-							input, err := ioutil.ReadFile(orgDir + "/" + winFile.Name())
+							input, err := os.ReadFile(orgDir + "/" + winFile.Name())
 							if err != nil {
 								fmt.Println(err)
 								return
 							}
 
-							err = ioutil.WriteFile(linuxCursorDir+"/"+linuxName, input, 0644)
+							err = os.WriteFile(linuxCursorDir+"/"+linuxName, input, 0644)
 							if err != nil {
 								fmt.Println("Error creating", linuxCursorDir+"/"+linuxName)
 								fmt.Println(err)
@@ -135,7 +149,7 @@ func main() {
 		// Add cursor.theme
 		cursorConfig := fmt.Sprintf("[Cursor Theme]\nName=%s\nInherits=Bibata-Modern-Classic\n", directories[i].Name())
 		byteCursorConfig := []byte(cursorConfig)
-		err := ioutil.WriteFile(linuxDir+"/"+"cursor.theme", byteCursorConfig, 0644)
+		err := os.WriteFile(linuxDir+"/"+"cursor.theme", byteCursorConfig, 0644)
 		if err != nil {
 			fmt.Println("Error creating", linuxDir+"/"+"cusror.theme")
 			fmt.Println(err)
